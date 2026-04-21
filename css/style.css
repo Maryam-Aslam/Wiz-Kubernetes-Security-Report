@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+    --bg-blue: #0254EC;
+    --sidebar-bg: #231F31; /* Updated to match image TOC background */
+    --accent-pink: #FC80FF;
+    --text-white: #FFFFFF;
+    --binder-blue: #012DE0;
+    --toc-border: rgba(252, 128, 255, 0.4);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Book Container for horizontal scrolling */
+.book-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #e6e9f0 100%);
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar styling for webkit */
+.book-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.book-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.book-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Individual Page Base */
+.page {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 700px;
+    height: 100vh;
+    margin: 0 calc(50vw - 400px);
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Page Types --- */
+
+/* Cover Page */
+.cover-page {
+    background-image: url('../assets/images/image (1).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.cover-page .content-area {
+    padding: 70px 80px 80px 160px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.cover-page .logo {
+    font-weight: 700;
+    font-size: 35px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 28px;
+ 
+}
+
+.cover-page .logo-star {
+    font-size: 18px;
+    margin-top: -12px;
+}
+
+.cover-page .title {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    letter-spacing: -1.5px;
+}
+.cover-graphic {
+    position: absolute;
+    bottom: 230px;
+    left: 58%;
+    transform: translateX(-50%);
+    
+    width: 430px;
+    max-width: 80%;
+    height: auto;
+
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+/* Dark Page (e.g., TOC) */
+.dark-page {
+    background-color: var(--sidebar-bg);
+    color: #FFFFFF;
+}
+
+/* Light Page (Standard Content) */
+.light-page {
+    background-color: #FFFFFF;
+    color: #1A1A1E;
+}
+
+.light-page .page-header,
+.light-page .page-footer {
+    color: #333;
+}
+
+.light-page .page-header {
+    border-bottom: none;
+}
+
+/* --- Page Elements --- */
+.page-header {
+    padding: 30px 60px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.page-content {
+    flex-grow: 1;
+    padding: 30px 50px; /* Further reduced padding */
+    overflow: hidden;
+}
+
+.page-footer {
+    padding: 20px 60px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: none;
+    background: linear-gradient(90deg, #FC80FF 0%, #0254EC 100%);
+    color: white !important;
+}
+
+.dark-page .page-footer {
+    opacity: 1;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-left .logo {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-left .logo-star {
+    font-size: 10px;
+    margin-top: -8px;
+    margin-left: 1px;
+}
+
+.footer-text {
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Typography for Content */
+.section-title {
+    font-size: 32px !important;
+    font-weight: 800 !important; /* Extra bold */
+    margin-top: 30px;
+    margin-bottom: 15px !important;
+    letter-spacing: -1px;
+    color: #111;
+}
+
+.section-subtitle {
+    font-size: 18px !important;
+    font-weight: 700;
+    margin-bottom: 20px !important;
+    color: #222 !important;
+}
+
+.page-content h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.section-title {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    margin-top: 20px;
+    margin-bottom: 6px !important;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-size: 15px !important;
+    font-weight: 700;
+    margin-bottom: 12px !important;
+    color: #333 !important;
+}
+
+.dark-page .page-content h3 {
+    color: var(--accent-pink);
+}
+
+.blue-divider {
+    height: 2px;
+    background-color: var(--bg-blue);
+    width: 100%;
+    margin: 12px 0;
+    opacity: 0.6;
+}
+
+.bold-text {
+    font-weight: 700;
+    color: #1A1A1E;
+}
+
+.page-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: #444; /* Slightly softer than black */
+}
+
+.page-content a {
+    color: #3385ff; /* More vibrant link blue */
+    text-decoration: none;
+    font-weight: 600; /* Bolder as per latest image */
+}
+
+.page-content a:hover {
+    text-decoration: underline;
+}
+
+/* Table of Contents Modern Styling */
+.toc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.toc-section {
+    width: 100%;
+}
+
+.toc-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 8px;
+    border-bottom: 2.5px solid var(--accent-pink);
+    margin-bottom: 15px;
+    text-transform: none;
+    letter-spacing: 0.2px;
+}
+
+.toc-items {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(252, 128, 255, 0.3);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.toc-items li:last-child {
+    border-bottom: none;
+}
+
+.toc-items li:hover {
+    background: rgba(252, 128, 255, 0.05);
+}
+
+.toc-title {
+    max-width: 85%;
+    line-height: 1.4;
+}
+
+.toc-page {
+    font-weight: 700;
+}
+
+.highlight-box {
+    border: 1px solid #FC80FF;
+    border-radius: 8px;
+    padding: 30px 40px;
+    display: flex;
+    gap: 0;
+    align-items: center;
+    margin: 30px 0;
+    background: #fff;
+    box-shadow: 3px 3px 0px 0px #FC80FF;
+}
+
+.highlight-box p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px; /* Larger text as per latest image */
+    color: #444;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.box-icon {
+    display: none; /* Removed as per latest image */
+}
+
+/* Data Insight Section (Chart Area) Refined */
+.data-insight-container {
+    display: grid;
+    grid-template-columns: 0.9fr 2.1fr;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 25px;
+    min-height: 220px;
+}
+
+.insight-text-box {
+    background: linear-gradient(180deg, #D480FF 0%, #336BFF 100%); /* Exact gradient from image */
+    padding: 35px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.insight-text-box h4 {
+    font-size: 24px; /* Larger and bolder */
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.insight-graphic-box {
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.insight-graphic-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mock Charts */
+.chart-container {
+    background: #1A1A1E;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 40px;
+    color: white;
+}
+
+.chart-container h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.mock-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    height: 200px;
+    padding-top: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bar {
+    flex: 1;
+    background: linear-gradient(to top, var(--bg-blue), var(--accent-pink));
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 0.3s;
+}
+
+.bar .label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .page {
+        width: 80vw;
+        margin: 0 10vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .page {
+        width: 90vw;
+        height: 100vh;
+        margin: 0 5vw;
+    }
+
+    .cover-page .content-area {
+        padding: 15% 10% 10% 18%;
+    }
+
+    .cover-page .title {
+        font-size: 8vw;
+    }
+}
