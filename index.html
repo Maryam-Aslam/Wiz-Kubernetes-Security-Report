@@ -12,6 +12,18 @@
 </head>
 
 <body>
+    <div class="book-nav">
+        <button onclick="prevPage()" aria-label="Previous Page">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button onclick="nextPage()" aria-label="Next Page">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+    </div>
     <div class="book-container">
 
         <!-- Page 1: Cover -->
@@ -88,107 +100,107 @@
         </div>
 
         <!-- Page 3: Content Page -->
-      
-       
-<div class="page light-page">
-    <div class="page-content" style="padding: 20px 40px;">
 
-        <h2 class="section-title" style="font-size: 22px !important; margin-bottom: 3px !important;">
-            Wiz Kubernetes Security Report
-        </h2>
 
-        <h3 class="section-subtitle"
-            style="font-size: 12px !important; color: #444 !important; margin-bottom: 6px !important;">
-            Limited 2025 Refresh and Key Takeaways
-        </h3>
+        <div class="page light-page">
+            <div class="page-content" style="padding: 20px 40px;">
 
-        <p style="font-size: 12px; line-height: 1.35; margin-bottom: 6px;">
-            The 2025 Kubernetes Security Report is based on our analysis of over 200,000 cloud accounts and
-            continues to uncover prevalent risks in K8s environments that often go unnoticed.
-        </p>
+                <h2 class="section-title" style="font-size: 22px !important; margin-bottom: 3px !important;">
+                    Wiz Kubernetes Security Report
+                </h2>
 
-        <div class="blue-divider" style="margin: 8px 0;"></div>
+                <h3 class="section-subtitle"
+                    style="font-size: 12px !important; color: #444 !important; margin-bottom: 6px !important;">
+                    Limited 2025 Refresh and Key Takeaways
+                </h3>
 
-        <p style="font-size: 12px; line-height: 1.35; margin-bottom: 6px;">
-            In our previous Kubernetes Security Report, we provided statistics on the state of Kubernetes
-            security. That report highlighted the increasing amount of threats targeting these environments and
-            also uncovered unnoticed risks by attributing them to various stages of the attack path on
-            Kubernetes clusters, from initial access to impact.
-        </p>
+                <p style="font-size: 12px; line-height: 1.35; margin-bottom: 6px;">
+                    The 2025 Kubernetes Security Report is based on our analysis of over 200,000 cloud accounts and
+                    continues to uncover prevalent risks in K8s environments that often go unnoticed.
+                </p>
 
-        <p style="font-size: 12px; line-height: 1.35; margin-bottom: 6px;">
-            <span class="bold-text">The main takeaway:</span> Overall container security maturity is low, even
-            though these environments are appealing targets for attackers and attempts to breach them are on the
-            rise. The report also identified the weakest links in cloud environments and introduced "The Zone
-            Defense" as an effective defense strategy for mitigating them.
-        </p>
+                <div class="blue-divider" style="margin: 8px 0;"></div>
 
-        <p style="font-size: 12px; line-height: 1.35; margin-bottom: 8px;">
-            Given that it's been more than 12 months since that last report, and Kubernetes remains a hugely
-            popular technology, we decided to publish a limited refresh. Rather than going deep into multiple
-            aspects of Kubernetes security, we've chosen a few key areas to focus on. We now have the luxury of
-            multiple years' worth of data, so this report is made up of a subset of the most interesting stats
-            from last year, as well as some shiny new data. In this report, we start with the a few key
-            takeaways and continue with the detailed analysis of the statistics collected. Let's dive in.
-        </p>
+                <p style="font-size: 12px; line-height: 1.35; margin-bottom: 6px;">
+                    In our previous Kubernetes Security Report, we provided statistics on the state of Kubernetes
+                    security. That report highlighted the increasing amount of threats targeting these environments and
+                    also uncovered unnoticed risks by attributing them to various stages of the attack path on
+                    Kubernetes clusters, from initial access to impact.
+                </p>
 
-        <h2 class="section-title" style="font-size: 18px; margin-top: 8px; margin-bottom: 4px;">
-            Key Takeaways
-        </h2>
+                <p style="font-size: 12px; line-height: 1.35; margin-bottom: 6px;">
+                    <span class="bold-text">The main takeaway:</span> Overall container security maturity is low, even
+                    though these environments are appealing targets for attackers and attempts to breach them are on the
+                    rise. The report also identified the weakest links in cloud environments and introduced "The Zone
+                    Defense" as an effective defense strategy for mitigating them.
+                </p>
 
-        <h3 class="section-subtitle" style="font-size: 12px; margin-bottom: 5px;">
-            Kubernetes Environments Continue to Be a Central Target
-        </h3>
+                <p style="font-size: 12px; line-height: 1.35; margin-bottom: 8px;">
+                    Given that it's been more than 12 months since that last report, and Kubernetes remains a hugely
+                    popular technology, we decided to publish a limited refresh. Rather than going deep into multiple
+                    aspects of Kubernetes security, we've chosen a few key areas to focus on. We now have the luxury of
+                    multiple years' worth of data, so this report is made up of a subset of the most interesting stats
+                    from last year, as well as some shiny new data. In this report, we start with the a few key
+                    takeaways and continue with the detailed analysis of the statistics collected. Let's dive in.
+                </p>
 
-        <!-- Highlight Box -->
-        <div class="highlight-box"
-            style="padding: 8px 8px; gap: 8px; margin: 8px 0; display: flex; align-items: center;">
+                <h2 class="section-title" style="font-size: 18px; margin-top: 8px; margin-bottom: 4px;">
+                    Key Takeaways
+                </h2>
 
-            <div style="width: 35px; flex-shrink: 0; display:flex; justify-content:center;">
-                <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
-                    <path d="M14 50 C14 25, 22 12, 32 12 C42 12, 50 25, 50 50"
-                        stroke="#FC80FF" stroke-width="1" />
-                    <path
-                        d="M32 18 C26 18, 22 24, 22 30 C22 35, 25 39, 32 39 C39 39, 42 35, 42 30 C42 24, 38 18, 32 18 Z"
-                        stroke="#0254EC" stroke-width="1" fill="white" />
-                </svg>
+                <h3 class="section-subtitle" style="font-size: 12px; margin-bottom: 5px;">
+                    Kubernetes Environments Continue to Be a Central Target
+                </h3>
+
+                <!-- Highlight Box -->
+                <div class="highlight-box"
+                    style="padding: 8px 8px; gap: 8px; margin: 8px 0; display: flex; align-items: center;">
+
+                    <div style="width: 35px; flex-shrink: 0; display:flex; justify-content:center;">
+                        <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
+                            <path d="M14 50 C14 25, 22 12, 32 12 C42 12, 50 25, 50 50" stroke="#FC80FF"
+                                stroke-width="1" />
+                            <path
+                                d="M32 18 C26 18, 22 24, 22 30 C22 35, 25 39, 32 39 C39 39, 42 35, 42 30 C42 24, 38 18, 32 18 Z"
+                                stroke="#0254EC" stroke-width="1" fill="white" />
+                        </svg>
+                    </div>
+
+                    <div style="width: 1px; height: 25px; background-color: #f7b0f9;"></div>
+
+                    <p style="margin: 0; font-size: 12px; line-height: 1.3;">
+                        Malicious parties are as active as ever, going after Kubernetes API endpoints and data plane
+                        services.
+                    </p>
+                </div>
+
+                <p style="font-size: 12px; line-height: 1.35; margin-bottom: 8px;">
+                    We repeated our experiment from the previous year, tracking the amount of time between initially
+                    staging the new cluster and the first malicious probing attempts. As with last year, the attacker
+                    response times show that the newly created public clusters quickly become targets. This time the
+                    longest attacker response time for GKE clusters was 1 hour 15 minutes vs 2 hours 13 minutes last
+                    year. For EKS and AKS clusters this "grace period" is drastically shorter — 28 and 18 minutes
+                    respectively.
+                </p>
+
+                <!-- Image (now will fit fully) -->
+                <div class="insight-graphic-box"
+                    style="background: #202026; border-radius: 8px; overflow: hidden; margin-top: 8px;">
+
+                    <img src="assets/images/final-three (2).png" alt="From Exposure to Discovery Chart"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+
             </div>
 
-            <div style="width: 1px; height: 25px; background-color: #f7b0f9;"></div>
-
-            <p style="margin: 0; font-size: 12px; line-height: 1.3;">
-                Malicious parties are as active as ever, going after Kubernetes API endpoints and data plane services.
-            </p>
+            <div class="page-footer">
+                <div class="footer-left">
+                    <span class="logo">WIZ<span class="logo-star">+</span></span>
+                    <span class="footer-text">Wiz Kubernetes Security Report</span>
+                </div>
+                <div class="footer-right">3</div>
+            </div>
         </div>
-
-        <p style="font-size: 12px; line-height: 1.35; margin-bottom: 8px;">
-            We repeated our experiment from the previous year, tracking the amount of time between initially
-            staging the new cluster and the first malicious probing attempts. As with last year, the attacker
-            response times show that the newly created public clusters quickly become targets. This time the
-            longest attacker response time for GKE clusters was 1 hour 15 minutes vs 2 hours 13 minutes last
-            year. For EKS and AKS clusters this "grace period" is drastically shorter — 28 and 18 minutes
-            respectively.
-        </p>
-
-        <!-- Image (now will fit fully) -->
-        <div class="insight-graphic-box"
-            style="background: #202026; border-radius: 8px; overflow: hidden; margin-top: 8px;">
-
-            <img src="assets/images/final-three (2).png"
-                alt="From Exposure to Discovery Chart"
-                style="width: 100%; height: auto; display: block;">
-        </div>
-
-    </div>
-
-    <div class="page-footer">
-        <div class="footer-left">
-            <span class="logo">WIZ<span class="logo-star">+</span></span>
-            <span class="footer-text">Wiz Kubernetes Security Report</span>
-        </div>
-        <div class="footer-right">3</div>
-    </div>
-</div>
         <!-- Page 4: Content Page Continued -->
         <div class="page light-page">
             <div class="page-content" style="padding: 20px 40px; display: flex; flex-direction: column;">
@@ -681,7 +693,8 @@
             <div class="page-content" style="padding: 20px 40px;">
                 <h3 style="margin-top: 15px; margin-bottom: 8px; font-size: 16px;">Initial Access – Data Plane</h3>
 
-                <p style="margin-bottom: 8px; font-size: 12px;">Regarding data plane exposure—good news! The number of publicly exposed
+                <p style="margin-bottom: 8px; font-size: 12px;">Regarding data plane exposure—good news! The number of
+                    publicly exposed
                     pods with High and Critical vulnerabilities has dropped significantly, from 44% last year to just
                     over 20% this year.</p>
                 <div class="data-insight-container" style="min-height: 140px; margin-top: 10px; margin-bottom: 15px;">
@@ -754,21 +767,24 @@
                     </div>
                 </div>
 
-                <p style="margin-bottom: 8px; font-size: 12px;">There are two possible explanations for this trend: first, improved
+                <p style="margin-bottom: 8px; font-size: 12px;">There are two possible explanations for this trend:
+                    first, improved
                     vulnerability management processes within organizations, including faster image patching and more
                     strategic image selection. Second, an overall improvement in container image quality.</p>
 
                 <h3 style="margin-top: 15px; margin-bottom: 8px; font-size: 16px;">Adoption of Security Features is
                     Lagging</h3>
 
-                <p style="margin-bottom: 8px; font-size: 12px;;">About a year ago, AWS introduced EKS Access Management — a shiny new
+                <p style="margin-bottom: 8px; font-size: 12px;;">About a year ago, AWS introduced EKS Access Management
+                    — a shiny new
                     feature allowing a novel way for IAM users and IAM roles to connect to and manage EKS clusters and
                     resources via EKS API. We have analyzed the security implications of this feature in a two-part blog
                     <a href="#">series</a>. Following this introduction, AWS <a href="#">deprecated</a> the previous
                     authentication method, CONFIG_MAP.
                 </p>
 
-                <p style="margin-bottom: 10px; font-size: 12px;">In last year’s report we talked extensively about the lack of adoption
+                <p style="margin-bottom: 10px; font-size: 12px;">In last year’s report we talked extensively about the
+                    lack of adoption
                     of security features, so we were naturally curious about the adoption of this new authentication
                     mode. Numbers show that after over a year of being generally available, the API authentication mode
                     is used in only 3% of clusters. The mixed authentication mode, API_AND_CONFIG_MAP, is employed in
@@ -821,7 +837,8 @@
                     </div>
                 </div>
 
-                <p style="margin-bottom: 8px; font-size: 12px;">We will keep monitoring these usage numbers. Meanwhile, the numbers
+                <p style="margin-bottom: 8px; font-size: 12px;">We will keep monitoring these usage numbers. Meanwhile,
+                    the numbers
                     corroborate last year’s report takeaway - the adoption of new security features is extremely slow,
                     and has room to improve.</p>
 
@@ -835,7 +852,7 @@
             </div>
         </div>
 
-        
+
 
         <!-- Page 12: About Wiz -->
         <div class="page dark-page">
@@ -855,8 +872,7 @@
                         style="color: white; text-decoration: underline;">https://www.wiz.io</a> for more information.
                 </p>
 
-<a href="#" class="read-more-btn"
-style="
+                <a href="#" class="read-more-btn" style="
 display: inline-flex;
 align-items: center;
 justify-content: center;
@@ -874,8 +890,8 @@ width: fit-content;
 min-width: 100px;
 height: 36px;
 ">
-Read more
-</a>
+                    Read more
+                </a>
 
                 <div
                     style="height: 1.5px; width: 100%; background: linear-gradient(90deg, #FC80FF 0%, #0254EC 100%); margin-bottom: 20px; margin-top: 20px;">
@@ -897,6 +913,49 @@ Read more
         </div>
 
     </div>
+
+    <script>
+        let container = document.querySelector('.book-container');
+        let pages = document.querySelectorAll('.page');
+        let index = 0;
+
+        function getPageWidth() {
+            return container.clientWidth; // more stable than offsetWidth
+        }
+
+        // Sync index while scrolling (debounced-style accuracy)
+        container.addEventListener('scroll', () => {
+            let pageWidth = getPageWidth();
+            let newIndex = Math.round(container.scrollLeft / pageWidth);
+
+            if (newIndex !== index) {
+                index = newIndex;
+            }
+        }, { passive: true });
+
+        function scrollToPage(i) {
+            const pageWidth = getPageWidth();
+
+            container.scrollTo({
+                left: i * pageWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        function nextPage() {
+            if (index < pages.length - 1) {
+                index++;
+                scrollToPage(index);
+            }
+        }
+
+        function prevPage() {
+            if (index > 0) {
+                index--;
+                scrollToPage(index);
+            }
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
 
