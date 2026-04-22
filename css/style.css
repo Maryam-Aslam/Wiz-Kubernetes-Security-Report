@@ -11,6 +11,14 @@
 }
 
 
+h1,
+h2 {
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    /* The secret to the "Wiz" headline look */
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +33,10 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* Makes the white-on-dark text look crisp */
+
 }
 
 .book-nav {
