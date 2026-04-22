@@ -36,7 +36,7 @@
         </div>
 
         <!-- Page 2: Table of Contents -->
-        <div class="page dark-page">
+        <div class="page dark-page" style=" background:#25242F;">
             <div class="page-content">
                 <h2>Table of Contents</h2>
                 <div class="toc-container">
@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="page-footer">
+            <div class="page-footer" style=" color:white; background:#25242F; border-top: 1px solid #808080 ;">
                 <div class="footer-left">
                     <span class="logo">WIZ<span class="logo-star">+</span></span>
                     <span class="footer-text">Wiz Kubernetes Security Report</span>
@@ -103,7 +103,7 @@
 
 
         <div class="page light-page">
-            <div class="page-content" style="padding: 20px 40px;">
+            <div class="page-content">
 
                 <h2 class="section-title" style="font-size: 22px !important; margin-bottom: 3px !important;">
                     Wiz Kubernetes Security Report
@@ -156,14 +156,9 @@
                 <div class="highlight-box"
                     style="padding: 8px 8px; gap: 8px; margin: 8px 0; display: flex; align-items: center;">
 
-                    <div style="width: 35px; flex-shrink: 0; display:flex; justify-content:center;">
-                        <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
-                            <path d="M14 50 C14 25, 22 12, 32 12 C42 12, 50 25, 50 50" stroke="#FC80FF"
-                                stroke-width="1" />
-                            <path
-                                d="M32 18 C26 18, 22 24, 22 30 C22 35, 25 39, 32 39 C39 39, 42 35, 42 30 C42 24, 38 18, 32 18 Z"
-                                stroke="#0254EC" stroke-width="1" fill="white" />
-                        </svg>
+                    <div style="width: 35px; flex-shrink: 0; display:flex; justify-content:center; align-items:center;">
+                        <img src="../assets/images/svg-page.PNG" alt="icon"
+                            style="width: 30px; height: 30px; object-fit: contain;">
                     </div>
 
                     <div style="width: 1px; height: 25px; background-color: #f7b0f9;"></div>
@@ -203,7 +198,7 @@
         </div>
         <!-- Page 4: Content Page Continued -->
         <div class="page light-page">
-            <div class="page-content" style="padding: 20px 40px; display: flex; flex-direction: column;">
+            <div class="page-content" style="display: flex; flex-direction: column;">
                 <p style="margin-bottom: 8px; font-size: 12px;">This is admittedly a startling figure, but readers
                     shouldn't focus too
                     much on the exact numbers here; the point is that in general, when staging the cluster, K8s
@@ -491,7 +486,7 @@
 
         <!-- Page 5: Content Page -->
         <div class="page light-page">
-            <div class="page-content" style="padding: 20px 40px;">
+            <div class="page-content">
                 <p style="margin-bottom: 8px;">Another indicator of improved maintenance and data plane version hygiene
                     is the decline in High/Critical vulnerabilities in exposed container images. As shown in the graph
                     below, the proportion of publicly exposed pods with severe vulnerabilities dropped by 50% between
@@ -690,7 +685,7 @@
 
         <!-- Page 11: Content Page -->
         <div class="page light-page">
-            <div class="page-content" style="padding: 20px 40px;">
+            <div class="page-content">
                 <h3 style="margin-top: 15px; margin-bottom: 8px; font-size: 16px;">Initial Access – Data Plane</h3>
 
                 <p style="margin-bottom: 8px; font-size: 12px;">Regarding data plane exposure—good news! The number of
@@ -856,7 +851,7 @@
 
         <!-- Page 12: About Wiz -->
         <div class="page dark-page">
-            <div class="page-content" style="padding: 40px 50px; display: flex; flex-direction: column;">
+            <div class="page-content" style="display: flex; flex-direction: column;">
                 <h2
                     style="font-size: 24px; font-weight: 800; margin-bottom: 15px; margin-top: 5px; color: white; letter-spacing: -0.5px;">
                     About Wiz</h2>

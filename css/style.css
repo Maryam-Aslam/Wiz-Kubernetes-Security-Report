@@ -206,7 +206,7 @@ body {
 
 /* --- Page Elements --- */
 .page-header {
-    padding: 30px 60px;
+    padding: 20px 40px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -216,13 +216,15 @@ body {
 
 .page-content {
     flex-grow: 1;
-    padding: 30px 50px;
-    /* Further reduced padding */
+    /* Consistent padding */
     overflow: hidden;
+    padding: 50px 60px;
+    padding: 30px 60px;
+
 }
 
 .page-footer {
-    padding: 20px 60px;
+    padding: 20px 40px;
     font-size: 13px;
     font-weight: 600;
     display: flex;
@@ -329,10 +331,8 @@ body {
 
 .page-content a {
     color: #3385ff;
-    /* More vibrant link blue */
     text-decoration: none;
     font-weight: 600;
-    /* Bolder as per latest image */
 }
 
 .page-content a:hover {
@@ -343,39 +343,46 @@ body {
 .toc-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    margin-top: 10%;
+
 }
 
 .toc-section {
     width: 100%;
+
 }
 
 .toc-section-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-size: 18px;
-    font-weight: 800;
-    padding-bottom: 8px;
-    border-bottom: 2.5px solid var(--accent-pink);
-    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(252, 128, 255, 0.4);
+    padding-bottom: 3px;
     text-transform: none;
     letter-spacing: 0.2px;
 }
 
 .toc-items {
     list-style: none;
-    padding: 0;
+    /* This creates the "little away" effect from the left */
+    padding: 0 0 0 25px;
+    margin: 0;
 }
 
 .toc-items li {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(252, 128, 255, 0.3);
-    font-size: 15px;
-    font-weight: 600;
+    padding: 6px 0;
+    /* More spacing to match the clean look */
+    border-bottom: 1px solid rgba(252, 128, 255, 0.4);
+    font-size: 12px;
+    /* Slightly larger to be legible */
+    font-weight: 300;
+    /* Semi-bold pink text */
+
     transition: background 0.2s;
 }
 
@@ -617,23 +624,33 @@ body {
     }
 
     .cover-page .content-area {
-        padding: 40px 0 0 60px;
-        gap: 15px;
+        padding: 60px 20px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 25px;
     }
 
     .cover-page .logo {
-        font-size: 28px;
+        font-size: 32px;
+        justify-content: center;
+        margin-left: 0;
     }
 
     .cover-page .title {
-        font-size: 28px;
+        font-size: 32px;
+        line-height: 1.1;
+        max-width: 280px;
+        margin: 0 auto;
     }
 
     .cover-graphic {
-        top: 60%;
-        left: 55%;
-        width: 95%;
-        max-width: 350px;
+        top: 65%;
+        left: 50%;
+        width: 100%;
+        max-width: 380px;
+        transform: translate(-50%, -50%);
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
     }
 
     .toc-container {
