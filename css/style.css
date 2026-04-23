@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
+
 :root {
     --bg-blue: #0254EC;
     --sidebar-bg: #231F31;
@@ -27,14 +28,15 @@ h2 {
 
 body {
     background-color: #f0f0f0;
-    font-family: 'Inter', sans-serif;
-    display: flex;
+  font-family: 'DM Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+           display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
+    
     /* Makes the white-on-dark text look crisp */
 
 }
@@ -165,11 +167,7 @@ body {
     margin-bottom: 0;
 }
 
-.cover-page .logo-star {
-    font-size: 28px;
-    margin-top: -15px;
-    color: var(--accent-pink);
-}
+
 
 .cover-page .title {
     font-size: 44px;
@@ -231,12 +229,23 @@ body {
     /* Consistent padding */
     overflow: hidden;
     padding: 50px 60px;
-    padding: 30px 60px;
 
+}
+/* Default (ALL pages → gradient) */
+.page-footer {
+    background: linear-gradient(90deg, #FC80FF 0%, #0254EC 100%);
+    color: white;
+    border-top: none;
+}
+
+/* ONLY Page 2 (dark override) */
+.page-footer.dark {
+    background: #25242F;
+    border-top: 1px solid #808080;
 }
 
 .page-footer {
-    padding: 20px 40px;
+    padding: 0px 55px;
     font-size: 13px;
     font-weight: 600;
     display: flex;
@@ -244,36 +253,31 @@ body {
     align-items: center;
     border-top: none;
     background: linear-gradient(90deg, #FC80FF 0%, #0254EC 100%);
-    color: white !important;
 }
 
 .dark-page .page-footer {
     opacity: 1;
 }
 
-.footer-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
-.footer-left .logo {
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-}
 
-.footer-left .logo-star {
-    font-size: 10px;
-    margin-top: -8px;
-    margin-left: 1px;
-}
 
 .footer-text {
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 1;
+    color: white;
+}
+.footer-logo-svg {
+    height: 19px;      /* Adjust this to make the logo larger or smaller */
+    width: auto;       /* Maintains the proper aspect ratio */
+    display: block;    /* Removes extra spacing at the bottom */
+}
+
+/* Ensure the parent container aligns it correctly */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;         /* Space between SVG and the Report text */
 }
 
 /* Typography for Content */
