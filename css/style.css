@@ -1,44 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+/* LOAD FONT (only once) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
-
-:root {
-    --bg-blue: #0254EC;
-    --sidebar-bg: #231F31;
-    /* Updated to match image TOC background */
-    --accent-pink: #FC80FF;
-    --text-white: #FFFFFF;
-    --binder-blue: #012DE0;
-    --toc-border: rgba(252, 128, 255, 0.4);
-}
-
-
-h1,
-h2 {
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    /* The secret to the "Wiz" headline look */
-}
-
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* FORCE DM SANS EVERYWHERE (fixes Inter override) */
+html, body, div, span, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --bg-blue: #0254EC;
+    --sidebar-bg: #231F31;
+    --accent-pink: #FC80FF;
+    --text-white: #FFFFFF;
+    --binder-blue: #012DE0;
+    --toc-border: rgba(252, 128, 255, 0.4);
+}
+
+/* BODY */
 body {
     background-color: #f0f0f0;
-  font-family: 'DM Sans', sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale; 
-           display: flex;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
-    
-    /* Makes the white-on-dark text look crisp */
+}
 
+/* HEADINGS */
+h1,
+h2 {
+    font-weight: 700; /* 800 removed (not available in import) */
+    letter-spacing: -1.5px;
+}
+
+/* TEXT */
+p,
+div,
+span {
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .book-nav {
